@@ -137,3 +137,13 @@ SIMPLE_JWT = {
 }
 
 AUTH_USER_MODEL = 'users.User'
+
+DJOSER = {
+    'SEND_ACTIVATION_EMAIL': False,
+    'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
+    'PASSWORD_RESET_CONFIRM_URL': 'api/v1/auth/password/reset/confirm/{uid}/{token}',
+
+}
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

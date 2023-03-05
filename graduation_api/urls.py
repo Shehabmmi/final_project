@@ -17,12 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    # admin panel
     path('admin/', admin.site.urls),
-    # path('api/', include('app.urls')),
-    # path('api/users/', include('users.urls')),
-    # path('auth/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    # path('auth/refresh-token/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/auth/', include('djoser.urls')),
-    path('api/auth/', include('djoser.urls.jwt')),
+
+    # /api/v1
+    path('api/v1/auth/', include('djoser.urls')),
+    path('api/v1/auth/', include('djoser.urls.jwt')),
 
 ]
